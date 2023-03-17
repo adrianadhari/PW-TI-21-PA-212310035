@@ -1,0 +1,61 @@
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.jumbotron {
+    background-image: url(../img/arc2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: -25px;
+    color: #e5e6ec;
+    border-bottom: 4px solid #14165d;
+    border-right: 4px solid #14165d;
+    border-left: 4px solid #14165d;
+    overflow: hidden;
+}
+
+.jumbotron p, .jumbotron h5 {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+hr {
+    width: 250px;
+    border: 3px solid #14165d;
+}
+
+section {
+    min-height: 400px;
+}
+
+.pleft, .pright {
+    opacity: 0;
+    transform: translate(-120px, 0) rotate(40deg);
+    transition: 1s;
+}
+
+.pright {
+    transform: translate(120px, 0) rotate(-40deg);
+}
+
+.pleft.show, .pright.show {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.portfolio .card-img-top {
+    opacity: 0;
+    transform: translate(0, 40px);
+    transition: .5s;
+}
+
+.portfolio .card-img-top.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
